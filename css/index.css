@@ -1,0 +1,139 @@
+/*
+  Theme Name: Index
+  Author: Víctor Vázquez González
+  Description: Estilos específicos de la página de inicio
+  Version: 3.0
+  License: Todos los derechos reservados
+*/
+
+/* ─── Hero / Título ─────────────────────────────────── */
+.IndexTitulo {
+  text-align: center;
+  padding: 4rem 1.5rem 3rem;
+  position: relative;
+}
+
+.IndexTitulo::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--gold);
+  margin: 0 auto 1.5rem;
+}
+
+.IndexTitulo h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2rem, 6vw, 4.2rem);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+.IndexTitulo h2 {
+  margin-top: 1.2rem;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--gold-light);
+  line-height: 1.6;
+}
+
+/* ─── Sección Destacados ────────────────────────────── */
+.Destacados {
+  flex: 1;
+  border-top: 3px solid var(--gold);
+  padding: 0 1rem 3rem;
+}
+
+.Destacados__intro {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+}
+
+.Destacados__intro-texto {
+  font-size: 1.05rem;
+  color: var(--grey-mid);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.Destacados__linea {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* ─── Tarjeta de entrada ────────────────────────────── */
+.Destacados__linea-entrada {
+  flex: 0 0 auto;
+  width: 560px;
+  max-width: 100%;
+  background-color: var(--navy-mid);
+  border: 1px solid #2a3f5f;
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.Destacados__linea-entrada:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.Destacados__linea-entrada-imagen {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.Destacados__linea-entrada-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.Destacados__linea-entrada-descripcion {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.Destacados__linea-entrada-descripcion-titulo {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  margin-bottom: 0.3rem;
+}
+
+.Destacados__linea-entrada-descripcion-fecha {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--grey-mid);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.7rem;
+}
+
+.Destacados__linea-entrada-descripcion-texto {
+  font-size: 0.97rem;
+  color: var(--white);
+  line-height: 1.6;
+  overflow-wrap: break-word;
+}
+
+/* ─── Responsive ────────────────────────────────────── */
+@media (max-width: 768px) {
+  .IndexTitulo {
+    padding: 2.5rem 1rem 2rem;
+  }
+
+  .Destacados__linea-entrada {
+    width: 100%;
+  }
+}

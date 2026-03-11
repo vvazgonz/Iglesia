@@ -1,0 +1,235 @@
+/*
+  Theme Name: Maranata
+  Author: Víctor Vázquez González
+  Description: Estilos para la web de la Comunidad Cristiana Maranata de Coslada
+  Version: 3.0
+  License: Todos los derechos reservados
+*/
+
+/* ─── Variables ─────────────────────────────────────── */
+:root {
+  --navy:       #0f1b2d;
+  --navy-mid:   #1a2e47;
+  --gold:       #c9952a;
+  --gold-light: #e8b84b;
+  --red-yt:     #cc1111;
+  --white:      #f5f3ee;
+  --grey-mid:   #8a8f9a;
+  --radius:     6px;
+  --transition: 0.25s ease;
+}
+
+/* ─── Reset y base ──────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--navy);
+  color: var(--white);
+  font-family: 'Source Sans 3', Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ─── Navegación ────────────────────────────────────── */
+.Navegacion {
+  background-color: var(--navy-mid);
+  border-bottom: 2px solid var(--gold);
+  position: relative;
+  z-index: 100;
+}
+
+.Navegacion__ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.Navegacion__item a {
+  font-family: 'Source Sans 3', sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white);
+  padding: 0.3rem 0;
+  border-bottom: 2px solid transparent;
+  transition: color var(--transition), border-color var(--transition);
+}
+
+.Navegacion__item a:hover,
+.Navegacion__item a.active {
+  color: var(--gold-light);
+  border-bottom-color: var(--gold-light);
+}
+
+/* Botón hamburguesa */
+.hamburguesa {
+  display: none;
+  position: absolute;
+  top: 0.85rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: var(--white);
+  z-index: 200;
+  line-height: 1;
+  padding: 0.2rem;
+  transition: color var(--transition);
+}
+.hamburguesa:hover { color: var(--gold-light); }
+
+/* ─── Hero / Título ─────────────────────────────────── */
+.hero {
+  text-align: center;
+  padding: 4rem 1.5rem 2.5rem;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--gold);
+  margin: 0 auto 1.5rem;
+}
+
+.hero__titulo {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.hero__titulo span {
+  color: var(--gold-light);
+}
+
+.hero__subtitulo {
+  margin-top: 1rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+  color: var(--grey-mid);
+  font-weight: 400;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* ─── Botones YouTube ───────────────────────────────── */
+.opcionesVideo {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 2rem 1rem 3rem;
+}
+
+.btn-yt {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.85rem 2.4rem;
+  background-color: var(--red-yt);
+  color: #fff;
+  border: 2px solid var(--red-yt);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition), transform var(--transition);
+}
+
+.btn-yt:hover {
+  background-color: #a50e0e;
+  border-color: #a50e0e;
+  transform: translateY(-2px);
+}
+.btn-yt:active { transform: translateY(0); }
+
+.btn-suscribir {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.85rem 2.4rem;
+  background-color: #fff;
+  color: var(--navy);
+  border: 2px solid #fff;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+
+.btn-suscribir:hover {
+  background-color: #e8e8e8;
+  border-color: #e8e8e8;
+  transform: translateY(-2px);
+}
+.btn-suscribir:active { transform: translateY(0); }
+
+/* ─── Footer ────────────────────────────────────────── */
+footer {
+  text-align: center;
+  padding: 1.25rem 1rem;
+  font-size: 0.82rem;
+  color: var(--grey-mid);
+  border-top: 1px solid #243347;
+  letter-spacing: 0.03em;
+}
+
+/* ─── Responsive ────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  .hamburguesa {
+    display: block;
+  }
+
+  .Navegacion {
+    padding-top: 3.5rem;
+  }
+
+  .Navegacion__ul {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 0.5rem 1.5rem 1rem;
+  }
+
+  .Navegacion__ul.is-open {
+    display: flex;
+  }
+
+  .Navegacion__item a {
+    display: block;
+    font-size: 1.2rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid #2e4060;
+    width: 100%;
+  }
+
+  .hero {
+    padding: 2.5rem 1rem 1.5rem;
+  }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO mejorado -->
+  <title>Medios Audiovisuales | Comunidad Cristiana Maranata de Coslada</title>
+  <meta name="description" content="Vídeos y transmisiones de la Comunidad Cristiana Maranata, ubicada en Coslada y San Fernando de Henares. Mira nuestros cultos en YouTube o directamente en la web.">
+  <meta name="keywords" content="Comunidad Cristiana Maranata, Coslada, San Fernando de Henares, iglesia evangélica, vídeos, YouTube, cultos">
+  <meta name="author" content="Víctor Vázquez González">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph (para redes sociales) -->
+  <meta property="og:title" content="Medios Audiovisuales | Comunidad Cristiana Maranata de Coslada">
+  <meta property="og:description" content="Vídeos y cultos de la Comunidad Cristiana Maranata de Coslada y San Fernando de Henares.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link href="css/maranata.css?v=3" rel="stylesheet" type="text/css">
+
+  <!-- Los scripts se cargan al final del body para que el DOM esté listo -->
+</head>
+
+<body>
+
+  <!-- Navegación -->
+  <nav class="Navegacion" id="nav" aria-label="Navegación principal"></nav>
+
+  <button
+    class="hamburguesa"
+    onclick="toggleMenu()"
+    aria-label="Abrir menú"
+    aria-expanded="false"
+    aria-controls="nav"
+  >☰</button>
+
+  <!-- Cabecera / Hero -->
+  <header class="hero">
+    <h1 class="hero__titulo">
+      Medios <span>Audiovisuales</span><br>de la Comunidad
+    </h1>
+    <p class="hero__subtitulo">
+      Mira nuestros cultos y vídeos en nuestro canal de YouTube.
+    </p>
+  </header>
+
+  <!-- Botones YouTube -->
+  <section class="opcionesVideo" aria-label="Enlace a YouTube">
+    <a href="https://www.youtube.com/@CCristianaMaranataCoslada" target="_blank" rel="noopener noreferrer">
+      <button type="button" class="btn-yt" aria-label="Ver en YouTube">
+        <svg width="22" height="16" viewBox="0 0 22 16" fill="currentColor" aria-hidden="true">
+          <path d="M21.54 2.5A2.76 2.76 0 0 0 19.6.55C17.88 0 11 0 11 0S4.12 0 2.4.55A2.76 2.76 0 0 0 .46 2.5 29 29 0 0 0 0 8a29 29 0 0 0 .46 5.5A2.76 2.76 0 0 0 2.4 15.45C4.12 16 11 16 11 16s6.88 0 8.6-.55a2.76 2.76 0 0 0 1.94-1.95A29 29 0 0 0 22 8a29 29 0 0 0-.46-5.5ZM8.75 11.38V4.62L14.5 8l-5.75 3.38Z"/>
+        </svg>
+        Ver en YouTube
+      </button>
+    </a>
+    <a href="https://www.youtube.com/@CCristianaMaranataCoslada?sub_confirmation=1" target="_blank" rel="noopener noreferrer">
+      <button type="button" class="btn-suscribir" aria-label="Suscribirse al canal">
+        🔔 Suscribirse
+      </button>
+    </a>
+  </section>
+
+  <main></main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>© 2024 Comunidad Cristiana Maranata de Coslada y San Fernando. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Scripts al final del body: el DOM ya existe cuando se ejecutan -->
+  <script src="js/generico.js?v=3"></script>
+</body>
+</html>
